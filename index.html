@@ -23,83 +23,164 @@
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
- "@type": "LocalBusiness",
- "@id": "https://www.neatstudio.co.kr/#business",
- "name": "NEAT 공간관리",
- "alternateName": [
-  "니트",
-  "니트 공간관리",
-  "NEAT 니트",
-  "NEAT",
-  "공칠일일스튜디오"
- ],
- "description": "광진구 중곡동 공간관리 전문 브랜드. 사무실·팝업/쇼룸·상가·병원 준공청소, 바닥 왁스코팅, 정기청소. 무료 방문 견적.",
- "url": "https://www.neatstudio.co.kr/",
- "telephone": "0507-1345-9649",
- "email": "0711studio@naver.com",
- "image": "https://www.neatstudio.co.kr/img/og-image.png",
- "logo": "https://www.neatstudio.co.kr/img/logo-green.png",
- "address": {
-  "@type": "PostalAddress",
-  "streetAddress": "긴고랑로15길 14, 1층",
-  "addressLocality": "광진구",
-  "addressRegion": "서울특별시",
-  "postalCode": "04937",
-  "addressCountry": "KR"
- },
- "areaServed": [
+ "@graph": [
   {
-   "@type": "City",
-   "name": "서울특별시"
-  }
- ],
- "sameAs": [
-  "https://blog.naver.com/0711studio",
-  "https://www.instagram.com/neat.0711/",
-  "https://naver.me/GVVIRK8i"
- ],
- "makesOffer": [
-  {
-   "@type": "Offer",
-   "itemOffered": {
-    "@type": "Service",
-    "name": "준공청소"
-   }
+   "@type": "LocalBusiness",
+   "@id": "https://www.neatstudio.co.kr/#business",
+   "name": "NEAT 공간관리",
+   "alternateName": [
+    "니트",
+    "니트 공간관리",
+    "NEAT 니트",
+    "NEAT",
+    "공칠일일스튜디오"
+   ],
+   "description": "광진구 중곡동 공간관리 전문 브랜드. 사무실·팝업/쇼룸·상가·병원 준공청소, 바닥 왁스코팅, 정기청소. 무료 방문 견적.",
+   "url": "https://www.neatstudio.co.kr/",
+   "telephone": "0507-1345-9649",
+   "email": "0711studio@naver.com",
+   "image": "https://www.neatstudio.co.kr/img/og-image.png",
+   "logo": "https://www.neatstudio.co.kr/img/logo-green.png",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "긴고랑로15길 14, 1층",
+    "addressLocality": "광진구",
+    "addressRegion": "서울특별시",
+    "postalCode": "04937",
+    "addressCountry": "KR"
+   },
+   "areaServed": [
+    {
+     "@type": "City",
+     "name": "서울특별시"
+    }
+   ],
+   "sameAs": [
+    "https://blog.naver.com/0711studio",
+    "https://www.instagram.com/neat.0711/",
+    "https://naver.me/GVVIRK8i"
+   ],
+   "makesOffer": [
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "준공청소"
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "바닥 왁스코팅"
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "정기청소"
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "사무실 청소"
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "병원 정기관리"
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "간판 청소"
+     }
+    }
+   ]
   },
   {
-   "@type": "Offer",
-   "itemOffered": {
-    "@type": "Service",
-    "name": "바닥 왁스코팅"
-   }
-  },
-  {
-   "@type": "Offer",
-   "itemOffered": {
-    "@type": "Service",
-    "name": "정기청소"
-   }
-  },
-  {
-   "@type": "Offer",
-   "itemOffered": {
-    "@type": "Service",
-    "name": "사무실 청소"
-   }
-  },
-  {
-   "@type": "Offer",
-   "itemOffered": {
-    "@type": "Service",
-    "name": "병원 정기관리"
-   }
-  },
-  {
-   "@type": "Offer",
-   "itemOffered": {
-    "@type": "Service",
-    "name": "간판 청소"
-   }
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "방문 견적은 비용이 드나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "무료예요. 현장을 직접 보고 작업 범위와 방법을 제안한 뒤 금액을 안내해요."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "어느 지역까지 오시나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "광진구 중곡동 NEAT 사무실을 거점으로 성수동·성동구·광진구를 비롯한 서울 전역에 방문해요."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "정기청소는 얼마나 자주 오나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "주 1회부터 매일까지 공간에 맞춰 정해요. 지금 관리하는 현장은 사무실 주 1회, 이비인후과 주 2회, 교회 주 3일, 내과·한의원 주 6회예요. 같은 팀이 같은 순서로 관리해요."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "야간이나 주말에도 작업하나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "네. 영업 전후, 야간, 주말 등 공간 일정에 맞춰 작업해요."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "준공청소는 언제 맡기는 게 좋나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "공사가 전부 끝난 걸 확인하고, 집기와 가구가 들어오기 전에 잡는 게 가장 수월해요. 새로 쏜 실리콘은 하루 정도 굳힌 뒤 물청소를 해요."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "바닥 왁스코팅은 얼마나 걸리나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "바닥 상태에 따라 작업 방법이 달라져서 방문 견적 때 먼저 확인해요. 기존 코팅이 남아 있고 겉만 탁해졌다면 연마기로 윗층만 갈아내고 바로 새 코팅을 올려 비교적 빨리 끝나요. 얼룩이 코팅 속까지 배었거나 덧칠이 두꺼워져 누렇게 떴다면 묵은 왁스를 전부 벗겨내는 박리부터 해서 시간이 더 걸려요. 어느 쪽이든 헹굼 뒤 완전히 말리고, 왁스를 얇게 여러 겹 한 겹씩 말려가며 올려요. 대부분 하루 안에 마치고, 성수동 쇼룸은 2명이 5시간 정도 걸렸어요. 코팅 후 하루 정도 여유를 두고 집기를 들이면 안전해요."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "세금계산서 발행되나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "네, 세금계산서 발행돼요."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "정기청소 최소 계약 기간이 있나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "없어요. 최소 계약 기간 없이 시작할 수 있어요."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "정기청소에 분리수거도 포함되나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "지금 관리하는 사무실과 병원 현장은 분리수거까지 함께 맡고 있어요. 범위는 방문 견적 때 함께 정해요."
+     }
+    }
+   ]
   }
  ]
 }
@@ -313,6 +394,55 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
 .dock .btn{min-height:48px;padding:0 10px;font-size:14px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
+<style>
+/* 서비스·지역 페이지 + 메인 추가 블록 (메인 토큰 그대로 사용) */
+.crumb{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}
+.crumb a{text-decoration:none;border-bottom:1px solid var(--line)}
+.lp-hero{background:var(--hero);color:var(--on-hero);padding-block:56px 48px}
+.lp-hero .crumb{color:var(--hero-dim)}.lp-hero .crumb a{border-color:var(--panel-line)}
+.lp-hero h1{font-size:clamp(30px,6vw,46px);font-weight:900}
+.lp-hero .lead{max-width:640px;color:var(--hero-sub);margin:16px 0 26px;font-size:17px}
+.lp-hero .ctas{display:flex;flex-wrap:wrap;gap:10px}
+.lp-shot{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.lp-shot.one{grid-template-columns:1fr}
+.lp-shot figure{margin:0;position:relative}
+.lp-shot img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px;display:block}
+.lp-shot.one img{aspect-ratio:16/9}
+.lp-shot figcaption{position:absolute;left:10px;bottom:10px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;background:var(--bg);color:var(--fg);padding:3px 8px;border-radius:2px}
+.cases{display:grid;gap:22px}
+.case{display:grid;grid-template-columns:260px 1fr;gap:24px;background:var(--surface);border:1px solid var(--line);padding:20px;border-radius:3px}
+.case img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px}
+.case > div{min-width:0}
+.case h3{font-size:19px;font-weight:900;margin-bottom:4px}
+.case .sub{font-size:13px;color:var(--accent);font-family:var(--mono);letter-spacing:.06em}
+.case ul{margin:12px 0 14px;padding-left:18px;color:var(--muted);font-size:15px;display:grid;gap:4px}
+@media (max-width:720px){.case{grid-template-columns:1fr}}
+.freq{width:100%;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums}
+.freq th,.freq td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line)}
+.freq th{font-size:12px;font-family:var(--mono);letter-spacing:.1em;color:var(--muted);font-weight:500}
+.freq td:nth-child(2){color:var(--accent);font-weight:700}
+.tbl{overflow-x:auto}
+.steps.six,.steps.five{padding:0;margin:0}
+.steps.six{grid-template-columns:repeat(3,1fr);row-gap:26px}
+.steps.five{grid-template-columns:repeat(5,1fr)}
+@media (max-width:820px){.steps.six,.steps.five{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.steps.six,.steps.five{grid-template-columns:1fr}}
+.faq{display:grid;gap:0;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:16px 2px}
+.faq summary{cursor:pointer;font-weight:700;font-size:16px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);color:var(--accent)}
+.faq details[open] summary::after{content:"−"}
+.faq p{margin:10px 0 0;color:var(--muted);max-width:720px}
+.more-svc{display:flex;flex-wrap:wrap;gap:8px}
+.more-svc a{font-size:14px;padding:8px 14px;border:1px solid var(--line);border-radius:99px;text-decoration:none;background:var(--surface)}
+.more-svc a:hover{border-color:var(--accent)}
+.svc .links{margin-top:auto;padding-top:8px;display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:700}
+.svc .links a{text-decoration:none;color:var(--accent)}
+.svc .main .links a{color:var(--panel-tag)}
+.foot-links{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px}
+.foot-links a{text-decoration:none;color:var(--muted)}
+</style>
 
 </head>
 <body>
@@ -320,7 +450,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
   <div class="wrap">
     <a class="logo" href="#top" aria-label="NEAT 처음으로"><img class="word wl" src="img/word-green.svg" alt="NEAT." width="308" height="80"><img class="word wd" src="img/word-cream.svg" alt="" width="308" height="80"></a>
     <nav aria-label="섹션">
-      <a href="#services">서비스</a><a href="#why">Why NEAT</a><a href="#before-after">전후 비교</a><a href="#work">최근 현장</a><a href="#visit">찾아오기</a>
+      <a href="#services">서비스</a><a href="#why">Why NEAT</a><a href="#before-after">전후 비교</a><a href="#work">최근 현장</a><a href="#faq">FAQ</a><a href="#visit">찾아오기</a>
     </nav>
     <a class="btn btn-solid sm" href="http://pf.kakao.com/_YixfBX/chat" target="_blank" rel="noopener">카톡 상담</a>
   </div>
@@ -332,7 +462,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
       <h1 style="margin:0;line-height:0"><img class="mark" src="img/logo-cream.svg" alt="NEAT 공간관리 — 광진구 준공청소·바닥 왁스코팅·정기청소" width="308" height="226"></h1>
       <p class="slogan">Space Needs A Standard.</p>
       <hr>
-      <p class="cats">사무실 · 팝업/쇼룸 · 상가 · 병원 · 관공서 · 정기관리</p>
+      <p class="cats">성수동 · 성동구 · 광진구 · 서울 전역 &nbsp;|&nbsp; 사무실 · 팝업/쇼룸 · 상가 · 병원</p>
       <p class="lead">여러분의 시간은 청소보다 소중합니다.<br>깨끗한 공간은, 전화 한 통이면 충분합니다.</p>
       <div class="ctas">
         <a class="btn btn-cream" href="http://pf.kakao.com/_YixfBX/chat" target="_blank" rel="noopener">카톡으로 견적 문의</a>
@@ -350,25 +480,25 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
 
 <section id="services">
     <div class="wrap">
-      <div class="sec-head"><h2>저희 NEAT가 하는 일</h2><span class="eyebrow">Services</span></div>
+      <div class="sec-head"><h2>정기청소·바닥 왁스코팅·준공청소</h2><span class="eyebrow">Services</span></div>
       <div class="svc">
         <article class="main">
           <span class="tag">REGULAR CARE</span>
-          <h3>정기관리</h3>
+          <h3>정기청소</h3>
           <p>주 1회부터 매일까지 공간에 맞춰 주기를 정해요. 같은 팀이 같은 순서로 관리해서 날마다 상태가 고르게 유지됩니다.</p>
-          <ul><li>병원·한의원</li><li>사무실</li><li>상가·매장</li><li>건물 공용부</li></ul>
+          <ul><li>병원·한의원</li><li>사무실</li><li>상가·매장</li><li>건물 공용부</li></ul><div class="links"><a href="seongsu-jeonggi.html">성수동·성동구 정기청소 →</a><a href="gwangjin-hospital.html">광진구 병원 정기청소 →</a></div>
         </article>
         <article>
           <span class="tag">FLOOR COATING</span>
           <h3>바닥 왁스코팅</h3>
           <p>바닥을 새로 깔지 않고 박리, 세척, 코팅, 광택 순서로 하루 만에 살려요. 바닥재와 통행량을 보고 재코팅 주기까지 안내합니다.</p>
-          <ul><li>데코타일</li><li>사무실</li><li>쇼룸·매장</li></ul>
+          <ul><li>데코타일</li><li>사무실</li><li>쇼룸·매장</li></ul><div class="links"><a href="wax-coating.html">바닥 왁스코팅 →</a></div>
         </article>
         <article>
           <span class="tag">ONE-TIME</span>
           <h3>준공·특수청소</h3>
           <p>공사 끝난 현장, 오래 묵은 공간, 높은 곳 작업까지 일정에 맞춰 투입합니다.</p>
-          <ul><li>준공청소</li><li>대청소</li><li>간판·외벽</li><li>유리·외창</li><li>그을음 제거</li></ul>
+          <ul><li>준공청소</li><li>대청소</li><li>간판·외벽</li><li>유리·외창</li><li>그을음 제거</li></ul><div class="links"><a href="seongsu-jungong.html">성수동 준공청소 →</a><a href="gwangjin-jungong.html">광진구 준공청소 →</a></div>
         </article>
       </div>
     </div>
@@ -376,7 +506,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
 
   <section id="why" class="why">
     <div class="wrap">
-      <div class="sec-head"><h2>Why NEAT</h2><span class="eyebrow">Our standard</span></div>
+      <div class="sec-head"><h2>청소업체 고를 때 NEAT가 다른 점</h2><span class="eyebrow">Our standard</span></div>
       <ul class="why-list">
         <li><b>무료 방문 견적</b><span>직접 보고 범위와 상태를 확인한 뒤 안내해요.</span></li>
         <li><b>고객사별 장비 분리</b><span>현장마다 도구를 따로 써서 오염이 옮겨 가지 않게 해요.</span></li>
@@ -389,7 +519,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
 
   <section id="before-after" style="padding-top:24px">
     <div class="wrap">
-      <div class="sec-head"><h2>작업 전과 후</h2><span class="eyebrow">Before / After</span></div>
+      <div class="sec-head"><h2>왁스코팅·준공청소 작업 전과 후</h2><span class="eyebrow">Before / After</span></div>
       <div class="ba-tabs" role="tablist" aria-label="현장 선택">
         <button role="tab" aria-selected="true" data-k="showroom">쇼룸 왁스코팅</button>
         <button role="tab" aria-selected="false" data-k="wax">사무실 바닥왁스</button>
@@ -402,15 +532,22 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
         <figure><div class="frame"><img id="ba1" src="img/ba-showroom-1.jpg" alt="NEAT 청소 작업 후 현장" width="1000" height="1000"></div><figcaption>AFTER</figcaption></figure>
       </div>
       <p class="ba-hint">옆으로 넘기면 작업 후 사진이 보여요 →</p>
-      <p class="ba-note" id="baNote">탁하게 죽어 있던 쇼룸 바닥을 박리하고 코팅을 올려 하루 만에 광택을 되살렸어요.</p>
+      <p class="ba-note" id="baNote">탁하게 죽어 있던 쇼룸 바닥을 연마기로 갈아내고 코팅을 올려 하루 만에 광택을 되살렸어요.</p>
       <a class="more" id="baLink" href="https://blog.naver.com/0711studio/224421204784" target="_blank" rel="noopener">이 현장 작업 과정 보기 <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
   <section id="work" style="padding-top:24px">
     <div class="wrap">
-      <div class="sec-head"><h2>최근 현장</h2><a class="eyebrow" href="https://blog.naver.com/0711studio" target="_blank" rel="noopener">블로그 전체 보기 →</a></div>
-      <div class="posts" id="posts"></div>
+      <div class="sec-head"><h2>성수동·광진구 최근 청소 현장</h2><a class="eyebrow" href="https://blog.naver.com/0711studio" target="_blank" rel="noopener">블로그 전체 보기 →</a></div>
+      <div class="posts" id="posts"><!--POSTS-->
+    <a class="post" href="https://blog.naver.com/0711studio/224446696540" target="_blank" rel="noopener"><div class="th"><img src="img/p-224446696540.jpg" alt="성수동 파티룸 준공청소, 첫 손님 받기 전에" loading="lazy"><span class="arrow" aria-hidden="true">↗</span></div><div><div class="meta"><b>준공청소</b><span>2026.10.19</span></div><h3>성수동 파티룸 준공청소, 첫 손님 받기 전에</h3><span class="go">글 보기 →</span></div></a>
+    <a class="post" href="https://blog.naver.com/0711studio/224443622381" target="_blank" rel="noopener"><div class="th"><img src="img/p-224443622381.jpg" alt="성수동 사무실 정기청소, 갈 때마다 하는 일" loading="lazy"><span class="arrow" aria-hidden="true">↗</span></div><div><div class="meta"><b>정기관리</b><span>2026.10.16</span></div><h3>성수동 사무실 정기청소, 갈 때마다 하는 일</h3><span class="go">글 보기 →</span></div></a>
+    <a class="post" href="https://blog.naver.com/0711studio/224441383537" target="_blank" rel="noopener"><div class="th"><img src="img/p-kitchen.jpg" alt="성수동 식당 준공청소, 평수보다 바닥 상태가 먼저" loading="lazy"><span class="arrow" aria-hidden="true">↗</span></div><div><div class="meta"><b>준공청소</b><span>2026.10.14</span></div><h3>성수동 식당 준공청소, 평수보다 바닥 상태가 먼저</h3><span class="go">글 보기 →</span></div></a>
+    <a class="post" href="https://blog.naver.com/0711studio/224440186437" target="_blank" rel="noopener"><div class="th"><img src="img/p-224440186437.jpg" alt="성동구 교회 정기청소, 어디까지 맡길 수 있나요?" loading="lazy"><span class="arrow" aria-hidden="true">↗</span></div><div><div class="meta"><b>정기관리</b><span>2026.10.13</span></div><h3>성동구 교회 정기청소, 어디까지 맡길 수 있나요?</h3><span class="go">글 보기 →</span></div></a>
+    <a class="post" href="https://blog.naver.com/0711studio/224439231207" target="_blank" rel="noopener"><div class="th"><img src="img/p-224439231207.jpg" alt="성수동 댄스학원 정기청소, 닦기 전에 걷어낼 것" loading="lazy"><span class="arrow" aria-hidden="true">↗</span></div><div><div class="meta"><b>정기관리</b><span>2026.10.12</span></div><h3>성수동 댄스학원 정기청소, 닦기 전에 걷어낼 것</h3><span class="go">글 보기 →</span></div></a>
+    <a class="post" href="https://blog.naver.com/0711studio/224433187183" target="_blank" rel="noopener"><div class="th"><img src="img/p-224433187183.jpg" alt="광진구 이비인후과 정기청소, 주 2회면 먼저 볼 곳" loading="lazy"><span class="arrow" aria-hidden="true">↗</span></div><div><div class="meta"><b>정기관리</b><span>2026.10.06</span></div><h3>광진구 이비인후과 정기청소, 주 2회면 먼저 볼 곳</h3><span class="go">글 보기 →</span></div></a>
+    <!--/POSTS--></div>
     </div>
   </section>
 
@@ -418,7 +555,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
     <div class="wrap"><div class="film-box">
       <div class="film-text">
         <div class="eyebrow">On site</div>
-        <h2>현장에서 일하는 NEAT</h2>
+        <h2>준공청소 현장 영상</h2>
         <p>공사가 끝난 공간을 비우고, 바닥과 선반까지 정리해 다시 쓸 수 있는 상태로 돌려놓는 과정이에요.</p>
         <a class="more" href="https://www.instagram.com/neat.0711/" target="_blank" rel="noopener">더 많은 현장 영상 보기 <span aria-hidden="true">→</span></a>
       </div>
@@ -440,7 +577,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
 
   <section style="padding-top:24px">
     <div class="wrap">
-      <div class="sec-head"><h2>진행 순서</h2><span class="eyebrow">How it works</span></div>
+      <div class="sec-head"><h2>방문 견적부터 정기관리까지 진행 순서</h2><span class="eyebrow">How it works</span></div>
       <ol class="steps steps-wrap">
         <li><b>문의 접수</b><span>내용을 검토하고 방문 일정을 조율해요</span></li>
         <li><b>현장 방문</b><span>현장을 보고 업무 범위와 방법을 제안해요</span></li>
@@ -450,12 +587,20 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
     </div>
   </section>
 
+  <section id="faq" style="padding-top:24px">
+    <div class="wrap">
+      <div class="sec-head"><h2>청소 맡기기 전 자주 묻는 질문</h2><span class="eyebrow">FAQ</span></div>
+      <div class="faq"><details><summary>방문 견적은 비용이 드나요?</summary><p>무료예요. 현장을 직접 보고 작업 범위와 방법을 제안한 뒤 금액을 안내해요.</p></details><details><summary>어느 지역까지 오시나요?</summary><p>광진구 중곡동 NEAT 사무실을 거점으로 성수동·성동구·광진구를 비롯한 서울 전역에 방문해요.</p></details><details><summary>정기청소는 얼마나 자주 오나요?</summary><p>주 1회부터 매일까지 공간에 맞춰 정해요. 지금 관리하는 현장은 사무실 주 1회, 이비인후과 주 2회, 교회 주 3일, 내과·한의원 주 6회예요. 같은 팀이 같은 순서로 관리해요.</p></details><details><summary>야간이나 주말에도 작업하나요?</summary><p>네. 영업 전후, 야간, 주말 등 공간 일정에 맞춰 작업해요.</p></details><details><summary>준공청소는 언제 맡기는 게 좋나요?</summary><p>공사가 전부 끝난 걸 확인하고, 집기와 가구가 들어오기 전에 잡는 게 가장 수월해요. 새로 쏜 실리콘은 하루 정도 굳힌 뒤 물청소를 해요.</p></details><details><summary>바닥 왁스코팅은 얼마나 걸리나요?</summary><p>바닥 상태에 따라 작업 방법이 달라져서 방문 견적 때 먼저 확인해요. 기존 코팅이 남아 있고 겉만 탁해졌다면 연마기로 윗층만 갈아내고 바로 새 코팅을 올려 비교적 빨리 끝나요. 얼룩이 코팅 속까지 배었거나 덧칠이 두꺼워져 누렇게 떴다면 묵은 왁스를 전부 벗겨내는 박리부터 해서 시간이 더 걸려요. 어느 쪽이든 헹굼 뒤 완전히 말리고, 왁스를 얇게 여러 겹 한 겹씩 말려가며 올려요. 대부분 하루 안에 마치고, 성수동 쇼룸은 2명이 5시간 정도 걸렸어요. 코팅 후 하루 정도 여유를 두고 집기를 들이면 안전해요.</p></details><details><summary>세금계산서 발행되나요?</summary><p>네, 세금계산서 발행돼요.</p></details><details><summary>정기청소 최소 계약 기간이 있나요?</summary><p>없어요. 최소 계약 기간 없이 시작할 수 있어요.</p></details><details><summary>정기청소에 분리수거도 포함되나요?</summary><p>지금 관리하는 사무실과 병원 현장은 분리수거까지 함께 맡고 있어요. 범위는 방문 견적 때 함께 정해요.</p></details></div>
+      <div style="margin-top:28px"><nav class="more-svc" aria-label="서비스 안내"><a href="seongsu-jungong.html">성수동 준공청소</a><a href="gwangjin-jungong.html">광진구 준공청소</a><a href="seongsu-jeonggi.html">성수동·성동구 정기청소</a><a href="gwangjin-hospital.html">광진구 병원 정기청소</a><a href="wax-coating.html">바닥 왁스코팅</a></nav></div>
+    </div>
+  </section>
+
   <section class="visit" id="visit">
     <div class="wrap">
       <div>
         <div class="eyebrow">Visit</div>
         <h2 style="margin-block:12px 14px">현장을 먼저 보고,<br>정확하게 안내드립니다</h2>
-        <p>방문 견적은 무료입니다. 서울 광진구 긴고랑로15길 14, 1층(중곡역 인근) NEAT 사무실에서도 상담하실 수 있습니다.</p>
+        <p>방문 견적은 무료입니다. 성수동·성동구·광진구를 비롯한 서울 전역에 방문하며, 서울 광진구 긴고랑로15길 14, 1층(중곡역 인근) NEAT 사무실에서도 상담하실 수 있습니다.</p>
         <div class="row">
           <a class="btn btn-cream" href="http://pf.kakao.com/_YixfBX/chat" target="_blank" rel="noopener">카톡 상담</a>
           <a class="btn btn-line" href="https://naver.me/GVVIRK8i" target="_blank" rel="noopener">네이버 지도</a>
@@ -475,6 +620,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
 
 <footer>
   <div class="wrap">
+    <nav class="foot-links" aria-label="서비스·지역 안내"><a href="seongsu-jungong.html">성수동 준공청소</a><a href="gwangjin-jungong.html">광진구 준공청소</a><a href="seongsu-jeonggi.html">성수동·성동구 정기청소</a><a href="gwangjin-hospital.html">광진구 병원 정기청소</a><a href="wax-coating.html">바닥 왁스코팅</a></nav>
     <span>NEAT(니트) 공간관리 · 공칠일일스튜디오</span><span>대표 조신희</span><span>사업자등록번호 338-54-01076</span>
   </div>
 </footer>
@@ -502,16 +648,15 @@ function renderPosts(list){
   const box = document.getElementById('posts');
   box.innerHTML = list.slice().sort((a,b)=>b.date.localeCompare(a.date)).slice(0,6).map(p=>`
     <a class="post" href="${esc(p.url)}" target="_blank" rel="noopener">
-      <div class="th"><img src="${esc(p.thumb)}" alt="" loading="lazy"><span class="arrow" aria-hidden="true">↗</span></div>
+      <div class="th"><img src="${esc(p.thumb)}" alt="${esc(p.title)}" loading="lazy"><span class="arrow" aria-hidden="true">↗</span></div>
       <div><div class="meta"><b>${esc(p.cat)}</b><span>${esc(p.date.replaceAll('-','.'))}</span></div><h3>${esc(p.title)}</h3><span class="go">글 보기 →</span></div>
     </a>`).join('');
 }
-renderPosts(FALLBACK);
 fetch('posts.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{ if(Array.isArray(d)&&d.length) renderPosts(d); }).catch(()=>{});
 
 // 전후 비교 탭
 const BA = {
-  showroom:{u:'https://blog.naver.com/0711studio/224421204784',a:'img/ba-showroom-0.jpg',b:'img/ba-showroom-1.jpg',w:1000,h:1000,n:'탁하게 죽어 있던 쇼룸 바닥을 박리하고 코팅을 올려 하루 만에 광택을 되살렸어요.'},
+  showroom:{u:'https://blog.naver.com/0711studio/224421204784',a:'img/ba-showroom-0.jpg',b:'img/ba-showroom-1.jpg',w:1000,h:1000,n:'탁하게 죽어 있던 쇼룸 바닥을 연마기로 갈아내고 코팅을 올려 하루 만에 광택을 되살렸어요.'},
   wax:{u:'https://blog.naver.com/0711studio/224416210986',a:'img/ba-wax-0.jpg',b:'img/ba-wax-1.jpg',w:960,h:1280,n:'얼룩이 남아 있던 사무실 바닥을 세척하고 왁스를 올렸어요. 창밖 풍경이 바닥에 비칠 정도로 광택이 살아났어요.'},
   office:{u:'https://blog.naver.com/0711studio/224421049262',a:'img/ba-office-0.jpg',b:'img/ba-office-1.jpg',n:'공사 자재와 집기가 흩어져 있던 사무실을 비우고 바닥까지 깨끗하게 정리했어요.'},
   kitchen:{u:'https://blog.naver.com/0711studio/224441383537',a:'img/ba-kitchen-0.jpg',b:'img/ba-kitchen-1.jpg',n:'공사 얼룩이 잔뜩 남아 있던 주방 바닥을 깨끗하게 걷어냈어요.'},
