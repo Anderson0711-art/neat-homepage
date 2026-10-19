@@ -443,6 +443,17 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
 .foot-links{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px}
 .foot-links a{text-decoration:none;color:var(--muted)}
 </style>
+<style>
+.cmp{position:relative;width:100%;max-width:640px;aspect-ratio:1/1;overflow:hidden;border-radius:3px;user-select:none;-webkit-user-select:none;touch-action:pan-y;cursor:ew-resize;background:var(--surface)}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;pointer-events:none}
+.cmp .after{clip-path:inset(0 0 0 var(--x,50%))}
+.cmp .bar{position:absolute;top:0;bottom:0;left:var(--x,50%);width:2px;margin-left:-1px;background:var(--cream)}
+.cmp .knob{position:absolute;top:50%;left:var(--x,50%);width:46px;height:46px;border-radius:50%;border:0;background:var(--cream);color:var(--bg);transform:translate(-50%,-50%);display:grid;place-items:center;font-size:17px;font-weight:700;cursor:ew-resize;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.cmp .lab{position:absolute;top:12px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;background:var(--bg);color:var(--fg);padding:4px 8px;border-radius:2px;opacity:.9}
+.cmp .lab.b{left:12px}.cmp .lab.a{right:12px;color:var(--accent)}
+.cmp-hint{margin-top:10px;font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.cmp.intro .after{transition:clip-path .6s ease}.cmp.intro .bar,.cmp.intro .knob{transition:left .6s ease}}
+</style>
 
 </head>
 <body>
@@ -527,11 +538,14 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
         <button role="tab" aria-selected="false" data-k="office">사무실 준공청소</button>
         <button role="tab" aria-selected="false" data-k="kitchen">식당 준공청소</button>
       </div>
-      <div class="ba">
-        <figure><div class="frame"><img id="ba0" src="img/ba-showroom-0.jpg" alt="청소 작업 전 현장" width="1000" height="1000"></div><figcaption>BEFORE</figcaption></figure>
-        <figure><div class="frame"><img id="ba1" src="img/ba-showroom-1.jpg" alt="NEAT 청소 작업 후 현장" width="1000" height="1000"></div><figcaption>AFTER</figcaption></figure>
+      <div class="cmp" id="cmp" style="--x:50%">
+        <img id="ba0" class="before" src="img/ba-showroom-0.jpg" alt="청소 작업 전 현장" width="1000" height="1000">
+        <img id="ba1" class="after" src="img/ba-showroom-1.jpg" alt="NEAT 청소 작업 후 현장" width="1000" height="1000">
+        <span class="lab b">BEFORE</span><span class="lab a">AFTER</span>
+        <div class="bar" aria-hidden="true"></div>
+        <button class="knob" id="baKnob" type="button" aria-label="작업 전후 비교 위치 (좌우 화살표로 조절)">⇆</button>
       </div>
-      <p class="ba-hint">옆으로 넘기면 작업 후 사진이 보여요 →</p>
+      <p class="cmp-hint">가운데 손잡이를 좌우로 끌어보세요</p>
       <p class="ba-note" id="baNote">탁하게 죽어 있던 쇼룸 바닥을 연마기로 갈아내고 코팅을 올려 하루 만에 광택을 되살렸어요.</p>
       <a class="more" id="baLink" href="https://blog.naver.com/0711studio/224421204784" target="_blank" rel="noopener">이 현장 작업 과정 보기 <span aria-hidden="true">→</span></a>
     </div>
@@ -634,6 +648,21 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
 </div>
 
 <script>
+// 전후 비교: 손잡이 드래그
+(function(){
+  const c=document.getElementById('cmp'), k=document.getElementById('baKnob'); if(!c) return;
+  let x=50, drag=false;
+  const set=v=>{x=Math.max(0,Math.min(100,v));c.style.setProperty('--x',x+'%')};
+  const pos=e=>{const r=c.getBoundingClientRect();set((e.clientX-r.left)/r.width*100)};
+  c.addEventListener('pointerdown',e=>{drag=true;c.classList.remove('intro');try{c.setPointerCapture(e.pointerId)}catch(_){};pos(e)});
+  c.addEventListener('pointermove',e=>{if(drag)pos(e)});
+  ['pointerup','pointercancel'].forEach(t=>c.addEventListener(t,()=>drag=false));
+  k.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){set(x-5);e.preventDefault()}if(e.key==='ArrowRight'){set(x+5);e.preventDefault()}});
+  window.baIntro=function(){c.classList.add('intro');set(78);setTimeout(()=>set(25),650);setTimeout(()=>set(50),1300);setTimeout(()=>c.classList.remove('intro'),2200)};
+  if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){baIntro();io.disconnect()}}),{threshold:.5});io.observe(c)}
+})();
+</script>
+<script>
 // 최근 현장: posts.json을 우선 사용하고, 못 읽으면 아래 기본 목록으로 표시
 const FALLBACK = [
  {"title":"광진구 내과 정기청소, 매일 챙기는 4가지","url":"https://blog.naver.com/0711studio/224431112185","date":"2026-10-04","cat":"정기관리","thumb":"img/p-clinic.jpg"},
@@ -665,7 +694,7 @@ const BA = {
 document.querySelectorAll('.ba-tabs button').forEach(btn=>btn.addEventListener('click',()=>{
   document.querySelectorAll('.ba-tabs button').forEach(b=>b.setAttribute('aria-selected', b===btn));
   const d = BA[btn.dataset.k];
-  ba0.src=d.a; ba1.src=d.b; baNote.textContent=d.n; baLink.href=d.u; document.querySelector('.ba').scrollTo({left:0});
+  ba0.src=d.a; ba1.src=d.b; baNote.textContent=d.n; baLink.href=d.u; baIntro();
 }));
 
 // 복사 버튼
