@@ -378,6 +378,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
 .dock-call{display:none}
 @media (max-width:820px),(hover:none),(pointer:coarse){.dock .dock-call{display:inline-flex}.dock .dock-copy{display:none}}
 </style>
+<style>
+.call-btn{display:none;text-decoration:none;font-weight:700}
+@media (max-width:820px),(hover:none),(pointer:coarse){.call-btn{display:inline-block}button.copy[data-copy="0507-1345-9649"]{display:none}}
+</style>
 </head>
 <body>
 <header class="top">
@@ -392,7 +396,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
     <h1>바닥 왁스코팅</h1>
     <p class="lead">광택이 죽고 얼룩진 바닥을 새로 깔기 전에 살려볼 수 있어요. 묵은 왁스와 얼룩을 걷어내고, 완전히 말린 뒤 왁스를 얇게 여러 겹 올립니다. 성수동 사무실과 쇼룸 바닥을 이렇게 되살렸어요.</p>
     <div class="ctas"><a class="btn btn-cream" href="http://pf.kakao.com/_YixfBX/chat" target="_blank" rel="noopener">카톡으로 견적 문의</a>
-      <span class="hero-tel">전화 문의 <a class="num" href="tel:050713459649">0507-1345-9649</a><button class="copy hero-copy" type="button" data-copy="0507-1345-9649">복사</button></span></div>
+      <span class="hero-tel">전화 문의 <a class="num" href="tel:050713459649">0507-1345-9649</a><button class="copy hero-copy" type="button" data-copy="0507-1345-9649">복사</button><a class="copy hero-copy call-btn" href="tel:050713459649">전화 걸기</a></span></div>
     <ul class="trust" aria-label="거래 조건"><li>무료 방문 견적</li><li>세금계산서 발행</li><li>최소 계약기간 없음</li></ul>
     <div class="lp-shot"><figure><img src="img/ba-showroom-0.jpg" alt="성수동 쇼룸 바닥 왁스코팅 작업 전"><figcaption>BEFORE</figcaption></figure><figure><img src="img/ba-showroom-1.jpg" alt="성수동 쇼룸 바닥 왁스코팅 작업 후"><figcaption>AFTER</figcaption></figure></div>
   </div></section>
@@ -425,7 +429,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
       <div class="row"><a class="btn btn-cream" href="http://pf.kakao.com/_YixfBX/chat" target="_blank" rel="noopener">카톡 상담</a><a class="btn btn-line" href="https://naver.me/GVVIRK8i" target="_blank" rel="noopener">네이버 지도</a></div>
     </div>
     <dl><dt>ADDRESS</dt><dd>서울 광진구 긴고랑로15길 14, 1층 (중곡동)</dd>
-      <dt>PHONE</dt><dd><a href="tel:050713459649">0507-1345-9649</a><button class="copy" type="button" data-copy="0507-1345-9649">복사</button></dd></dl>
+      <dt>PHONE</dt><dd><a href="tel:050713459649">0507-1345-9649</a><button class="copy" type="button" data-copy="0507-1345-9649">복사</button><a class="copy call-btn" href="tel:050713459649">전화 걸기</a></dd></dl>
   </div></section>
 
   <section style="padding-block:40px"><div class="wrap">
@@ -447,7 +451,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
   </div>
 </div>
 <script>
-document.querySelectorAll('.copy, .dock-copy').forEach(b=>b.addEventListener('click',()=>{
+document.querySelectorAll('button.copy, .dock-copy').forEach(b=>b.addEventListener('click',()=>{
   const t=b.dataset.copy, o=b.textContent;
   const done=()=>{b.textContent='복사됨';setTimeout(()=>b.textContent=o,1400)};
   const fail=()=>{b.textContent=t;setTimeout(()=>b.textContent=o,4000)};
