@@ -345,6 +345,31 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
 .foot-links{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px}
 .foot-links a{text-decoration:none;color:var(--muted)}
 </style>
+<style>
+.cmp{position:relative;width:100%;max-width:640px;aspect-ratio:1/1;overflow:hidden;border-radius:3px;user-select:none;-webkit-user-select:none;touch-action:pan-y;cursor:ew-resize;background:var(--surface)}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;pointer-events:none}
+.cmp .after{clip-path:inset(0 0 0 var(--x,50%))}
+.cmp .bar{position:absolute;top:0;bottom:0;left:var(--x,50%);width:2px;margin-left:-1px;background:var(--cream)}
+.cmp .knob{position:absolute;top:50%;left:var(--x,50%);width:46px;height:46px;border-radius:50%;border:0;background:var(--cream);color:var(--bg);transform:translate(-50%,-50%);display:grid;place-items:center;font-size:17px;font-weight:700;cursor:ew-resize;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.cmp .lab{position:absolute;top:12px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;background:var(--bg);color:var(--fg);padding:4px 8px;border-radius:2px;opacity:.9}
+.cmp .lab.b{left:12px}.cmp .lab.a{right:12px;color:var(--accent)}
+.cmp-hint{margin-top:10px;font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.cmp.intro .after{transition:clip-path .6s ease}.cmp.intro .bar,.cmp.intro .knob{transition:left .6s ease}}
+</style>
+<style>
+.trust{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;font-weight:500}
+.trust li{display:flex;align-items:center;gap:6px}
+.trust li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+.hero .trust,.lp-hero .trust{justify-content:center;color:var(--hero-sub)}
+.lp-hero .trust{justify-content:flex-start}
+.hero .trust li::before,.lp-hero .trust li::before{background:var(--panel-tag)}
+.visit .trust{margin:0 0 18px;color:var(--panel-sub)}
+.visit .trust li::before{background:var(--panel-tag)}
+.hero-tel a.num{text-decoration:none;color:var(--on-hero)}
+#tel,.visit dd a[href^="tel:"]{color:inherit;text-decoration:none}
+.dock-call{display:none}
+@media (hover:none) and (pointer:coarse){.dock-call{display:inline-flex}.dock .dock-copy{display:none}}
+</style>
 </head>
 <body>
 <header class="top">
@@ -359,7 +384,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
     <h1>광진구 병원 정기청소</h1>
     <p class="lead">광진구 내과와 이비인후과를 정기적으로 관리하고 있어요. 대기실과 진료실, 화장실, 쓰레기 분리까지 병원이 문을 열기 전에 같은 기준으로 정리합니다.</p>
     <div class="ctas"><a class="btn btn-cream" href="http://pf.kakao.com/_YixfBX/chat" target="_blank" rel="noopener">카톡으로 견적 문의</a>
-      <span class="hero-tel">전화 문의 <span class="num">0507-1345-9649</span><button class="copy hero-copy" type="button" data-copy="0507-1345-9649">복사</button></span></div>
+      <span class="hero-tel">전화 문의 <a class="num" href="tel:050713459649">0507-1345-9649</a><button class="copy hero-copy" type="button" data-copy="0507-1345-9649">복사</button></span></div>
+    <ul class="trust" aria-label="거래 조건"><li>무료 방문 견적</li><li>세금계산서 발행</li><li>최소 계약기간 없음</li></ul>
     <div class="lp-shot one"><figure><img src="img/clinic-wait.jpg" alt="광진구 이비인후과 대기실 정기청소 작업 후"></figure></div>
   </div></section>
 
@@ -388,10 +414,11 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
       <div class="eyebrow">Visit</div>
       <h2 style="margin-block:12px 14px">현장을 먼저 보고,<br>정확하게 안내드립니다</h2>
       <p>방문 견적은 무료입니다. 광진구 중곡동 NEAT 사무실을 거점으로 성수동·성동구·광진구를 비롯한 서울 전역에 방문합니다.</p>
+      <ul class="trust" aria-label="거래 조건"><li>무료 방문 견적</li><li>세금계산서 발행</li><li>최소 계약기간 없음</li></ul>
       <div class="row"><a class="btn btn-cream" href="http://pf.kakao.com/_YixfBX/chat" target="_blank" rel="noopener">카톡 상담</a><a class="btn btn-line" href="https://naver.me/GVVIRK8i" target="_blank" rel="noopener">네이버 지도</a></div>
     </div>
     <dl><dt>ADDRESS</dt><dd>서울 광진구 긴고랑로15길 14, 1층 (중곡동)</dd>
-      <dt>PHONE</dt><dd><span>0507-1345-9649</span><button class="copy" type="button" data-copy="0507-1345-9649">복사</button></dd></dl>
+      <dt>PHONE</dt><dd><a href="tel:050713459649">0507-1345-9649</a><button class="copy" type="button" data-copy="0507-1345-9649">복사</button></dd></dl>
   </div></section>
 
   <section style="padding-block:40px"><div class="wrap">
@@ -408,7 +435,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px}
 <div class="dock">
   <div class="in">
     <a class="btn btn-kakao" href="http://pf.kakao.com/_YixfBX/chat" target="_blank" rel="noopener">카톡 견적 문의</a>
-    <button class="btn btn-primary dock-copy" type="button" data-copy="0507-1345-9649">번호 복사</button>
+    <a class="btn btn-primary dock-call" href="tel:050713459649">전화 걸기</a><button class="btn btn-primary dock-copy" type="button" data-copy="0507-1345-9649">번호 복사</button>
     <a class="btn btn-line" href="https://naver.me/GVVIRK8i" target="_blank" rel="noopener">지도</a>
   </div>
 </div>
