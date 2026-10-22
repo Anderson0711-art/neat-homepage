@@ -2,6 +2,33 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N9PYKFDQFT"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-N9PYKFDQFT');
+</script>
+<script>
+// 문의 버튼 클릭 측정
+document.addEventListener('click', function(e){
+  var el = e.target.closest && e.target.closest('a,button'); if(!el || typeof gtag !== 'function') return;
+  var h = el.getAttribute('href') || '', c = el.getAttribute('data-copy') || '', n = '';
+  if (h.indexOf('pf.kakao.com') > -1) n = 'kakao_click';
+  else if (h.indexOf('tel:') === 0) n = 'call_click';
+  else if (c.indexOf('0507') === 0) n = 'phone_copy';
+  else if (c.indexOf('@') > -1) n = 'email_copy';
+  else if (h.indexOf('naver.me') > -1) n = 'map_click';
+  else if (h.indexOf('myurl.ai') > -1) n = 'brochure_click';
+  else if (h.indexOf('blog.naver.com') > -1) n = 'blog_click';
+  else if (h.indexOf('instagram.com') > -1) n = 'instagram_click';
+  if (!n) return;
+  var sec = el.closest('section,header,footer,.dock');
+  gtag('event', n, {button_text: (el.textContent || '').trim().slice(0,40), button_area: sec ? (sec.id || sec.className.split(' ')[0] || sec.tagName.toLowerCase()) : '', link_url: h});
+}, true);
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>성수동 준공청소 | 식당·파티룸 오픈 전 청소 — NEAT(니트)</title>
 <meta name="description" content="성수동·성동구 준공청소. 인테리어 공사 끝난 식당·파티룸을 오픈 전에 정리한 NEAT 현장 사례와 작업 순서, 맡기기 전 확인할 것. 무료 방문 견적.">
