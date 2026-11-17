@@ -625,22 +625,22 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     <div class="wrap">
       <div class="sec-head"><h2>왁스코팅·준공청소 작업 전과 후</h2><span class="eyebrow">Before / After</span></div>
       <div class="ba-tabs" role="tablist" aria-label="현장 선택">
-        <button role="tab" aria-selected="true" data-k="showroom">쇼룸 왁스코팅</button>
-        <button role="tab" aria-selected="false" data-k="wax">사무실 바닥왁스</button>
+        <button role="tab" aria-selected="true" data-k="coat">쇼룸 왁스코팅</button>
+        <button role="tab" aria-selected="false" data-k="wax">사무실 왁스코팅</button>
         <button role="tab" aria-selected="false" data-k="sign">교회 간판청소</button>
         <button role="tab" aria-selected="false" data-k="office">사무실 준공청소</button>
         <button role="tab" aria-selected="false" data-k="kitchen">식당 준공청소</button>
       </div>
       <div class="cmp" id="cmp" style="--x:50%">
-        <img id="ba0" class="before" src="img/ba-showroom-0.jpg" alt="청소 작업 전 현장" width="1000" height="1000">
-        <img id="ba1" class="after" src="img/ba-showroom-1.jpg" alt="NEAT 청소 작업 후 현장" width="1000" height="1000">
+        <img id="ba0" class="before" src="img/ba-coat-0.jpg" alt="청소 작업 전 현장" width="1000" height="1000">
+        <img id="ba1" class="after" src="img/ba-coat-1.jpg" alt="NEAT 청소 작업 후 현장" width="1000" height="1000">
         <span class="lab b">BEFORE</span><span class="lab a">AFTER</span>
         <div class="bar" aria-hidden="true"></div>
         <button class="knob" id="baKnob" type="button" aria-label="작업 전후 비교 위치 (좌우 화살표로 조절)">⇆</button>
       </div>
       <p class="cmp-hint">가운데 손잡이를 좌우로 끌어보세요</p>
-      <p class="ba-note" id="baNote">탁하게 죽어 있던 쇼룸 바닥을 연마기로 갈아내고 코팅을 올려 하루 만에 광택을 되살렸어요.</p>
-      <a class="more" id="baLink" href="https://blog.naver.com/0711studio/224421204784" target="_blank" rel="noopener">이 현장 작업 과정 보기 <span aria-hidden="true">→</span></a>
+      <p class="ba-note" id="baNote">얼룩이 번진 사무실 바닥을 연마기로 먼저 갈아낸 뒤 코팅했어요. 코팅을 마친 바닥에 창이 비쳐 보여요.</p>
+      <a class="more" id="baLink" href="https://blog.naver.com/0711studio/224464958961" target="_blank" rel="noopener">이 현장 작업 과정 보기 <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
@@ -768,7 +768,7 @@ fetch('posts.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{ if(
 
 // 전후 비교 탭
 const BA = {
-  showroom:{u:'https://blog.naver.com/0711studio/224421204784',a:'img/ba-showroom-0.jpg',b:'img/ba-showroom-1.jpg',w:1000,h:1000,n:'탁하게 죽어 있던 쇼룸 바닥을 연마기로 갈아내고 코팅을 올려 하루 만에 광택을 되살렸어요.'},
+  coat:{u:'https://blog.naver.com/0711studio/224464958961',a:'img/ba-coat-0.jpg',b:'img/ba-coat-1.jpg',w:1000,h:1000,n:'얼룩이 번진 사무실 바닥을 연마기로 먼저 갈아낸 뒤 코팅했어요. 코팅을 마친 바닥에 창이 비쳐 보여요.'},
   wax:{u:'https://blog.naver.com/0711studio/224416210986',a:'img/ba-wax-0.jpg',b:'img/ba-wax-1.jpg',w:960,h:1280,n:'얼룩이 남아 있던 사무실 바닥을 세척하고 왁스를 올렸어요. 창밖 풍경이 바닥에 비칠 정도로 광택이 살아났어요.'},
   office:{u:'https://blog.naver.com/0711studio/224421049262',a:'img/ba-office-0.jpg',b:'img/ba-office-1.jpg',n:'공사 자재와 집기가 흩어져 있던 사무실을 비우고 바닥까지 깨끗하게 정리했어요.'},
   kitchen:{u:'https://blog.naver.com/0711studio/224441383537',a:'img/ba-kitchen-0.jpg',b:'img/ba-kitchen-1.jpg',n:'공사 얼룩이 잔뜩 남아 있던 주방 바닥을 깨끗하게 걷어냈어요.'},
