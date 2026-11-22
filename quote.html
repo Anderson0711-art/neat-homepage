@@ -573,7 +573,7 @@ function ok(n){
 function svc(){var x=f.querySelector('input[name="situation"]:checked');return x?x.dataset.svc:''}
 function fill(){
   var s=f.querySelector('input[name="situation"]:checked');
-  document.getElementById('cfSvc').textContent=s.value==='unsure'?'사진을 보고 어떤 청소가 맞는지 알려드릴게요':s.parentNode.querySelector('b').textContent+' → '+svc()+'으로 견적드릴게요';
+  document.getElementById('cfSvc').textContent=s.value==='unsure'?'사진을 보고 어떤 청소가 맞는지 알려드릴게요':s.parentNode.querySelector('b').textContent+' → '+svc()+(function(w){var c=w.charCodeAt(w.length-1)-44032;return (c>=0&&c<11172&&c%28&&c%28!==8)?'으로':'로'})(svc())+' 견적드릴게요';
   var w=val('when');if(w==='날짜 정해져 있어요')w=document.getElementById('q_date').value;
   var rows=[['공간',val('space')],['크기',val('size')],['언제',w],['지역',document.getElementById('q_area').value.trim()],['사진',photos.length?photos.length+'장':'없음'],['연락처',document.getElementById('q_phone').value+' ('+val('via')+')']];
   var nm=document.getElementById('q_name').value.trim();if(nm)rows.push(['이름',nm]);
