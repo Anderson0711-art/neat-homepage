@@ -612,7 +612,7 @@ function submit(){
   fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)})
     .then(function(r){return r.json()}).then(function(j){if(j&&j.no)data.no=j.no;finish()})
     .catch(function(){next.disabled=false;next.textContent='다시 보내기';err.textContent='전송이 안 됐어요. 잠시 뒤 다시 누르시거나 카톡·전화로 연락주세요.'});}
-var h=(location.hash||'').slice(1);var k=PRE[h]||h;var pre=f.querySelector('input[name="situation"][value="'+k+'"]');if(pre)pre.checked=true;
+/* 2026-11-22 대표: 어느 페이지에서 와도 첫 질문은 미리 고르지 않음 (#페이지이름은 '꼬리표' 기록용으로만 씀) */
 show(1);
 })();
 </script>
